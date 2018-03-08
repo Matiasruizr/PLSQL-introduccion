@@ -15,9 +15,14 @@ en ella se sitúan las ordenes SQL y procedimentales que llevan a cabo el trabaj
 en ella se sitúa código que solo es ejecutado cuando ocurre un error
 
 
-    Codigos de utilidad
-      Mostrar mensajes del servidor de bases de datos
+# Codigos de utilidad
+  Mostrar mensajes del servidor de bases de datos
         set serveroutput on
-      Imprimir una linea 
+
+  Imprimir una linea 
         DBMS_OUTPUT.PUT_LINE( x );
-      
+
+  Guardar una consulta en una variable
+        SELECT COUNT(*) INTO NUMEROUSUARIOS
+        FROM USUARIO;
+        
