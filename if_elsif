@@ -5,7 +5,7 @@
 select * from employees;
 --Codigo 1 --
 DECLARE
- numero_empleados number;
+ numero_empleados employees.Employee_Id%type; --Toma el tipo de dato de Employee_Id y lo asigna a la variable
 BEGIN
   select count(employee_id) into numero_empleados 
   from employees
@@ -19,7 +19,7 @@ END;
 
 -- Codigo 2 --
 DECLARE
- numero_empleados number;
+ numero_empleados employees.Employee_Id%type;
 BEGIN
   select count(employee_id) into numero_empleados 
   from employees
@@ -35,7 +35,7 @@ END;
 
 -- Codigo 3 --
 DECLARE
- numero_empleados number;
+ numero_empleados employees.Employee_Id%type;
 BEGIN
   select count(employee_id) into numero_empleados 
   from employees
