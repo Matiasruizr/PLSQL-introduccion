@@ -1,0 +1,55 @@
+/* 
+ Usar usuario HR (Contiene tablas por defecto como employees)
+*/
+
+select * from employees;
+--Codigo 1 --
+DECLARE
+ numero_empleados number;
+BEGIN
+  select count(employee_id) into numero_empleados 
+  from employees
+  where employee_id > 150;
+
+  if  numero_empleados > 10 then
+   dbms_output.put_line('Son mas de 10');
+  end if;
+END;
+/
+
+-- Codigo 2 --
+DECLARE
+ numero_empleados number;
+BEGIN
+  select count(employee_id) into numero_empleados 
+  from employees
+  where employee_id > 1150;
+
+  if  numero_empleados > 10 then
+   dbms_output.put_line('Son mas de 10');
+   else
+    dbms_output.put_line('Son menos de 10');
+    end if;
+END;
+/
+
+-- Codigo 3 --
+DECLARE
+ numero_empleados number;
+BEGIN
+  select count(employee_id) into numero_empleados 
+  from employees
+  where employee_id > 196;
+
+    if  numero_empleados > 10 then
+    dbms_output.put_line('Son mas de 10');
+    elsif  numero_empleados = 10 then 
+    dbms_output.put_line('Son exactamente 10');
+    elsif  numero_empleados = 9 then 
+    dbms_output.put_line('Son exactamente 9');
+    else 
+    dbms_output.put_line('Son menos de 10');
+    end if;
+    
+END;
+/
