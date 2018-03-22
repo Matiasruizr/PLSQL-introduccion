@@ -26,3 +26,10 @@ en ella se sitúa código que solo es ejecutado cuando ocurre un error
         SELECT COUNT(*) INTO NUMEROUSUARIOS
         FROM USUARIO;
         
+  Guardar copia de una base de datos en variable, respetando el tipo
+          REGISTRO EMPLOYEES%ROWTYPE;
+
+# CICLOS
+  # IF
+  # WHILE
+  # FOR
