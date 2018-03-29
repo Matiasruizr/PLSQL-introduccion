@@ -31,5 +31,7 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE(emp_dep10v2.last_name);
     fetch c1 into emp_dep10v2;-- Colocamos el cursor en un valor mas abajo (Casi como un ++)
   end loop;
+  
+  close cl; -- Debemos cerrarlo para poder ejecutarlo nuevamente
 END;
 /
