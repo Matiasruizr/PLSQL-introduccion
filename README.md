@@ -33,3 +33,6 @@ en ella se sitúa código que solo es ejecutado cuando ocurre un error
   # IF
   # WHILE
   # FOR
+# VARIABLES COMPUESTAS
+
+# CURORES
