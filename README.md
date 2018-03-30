@@ -31,8 +31,33 @@ en ella se sitúa código que solo es ejecutado cuando ocurre un error
 
 # CICLOS
   # IF
+      IF x THEN
+       RETURN y;
+      ELSE
+       RETURN z;
+      END IF;
+
   # WHILE
+       WHILE X<100 LOOP
+       X := X+ 1;
+       END LOOP;
   # FOR
+        FOR i IN 1..n LOOP
+          DBMS_OUTPUT.PUT_LINE (i);
+        END LOOP;
+        (Para i igual a 1, hasta en, reproducir el loop)
 # VARIABLES COMPUESTAS
 
-# CURORES
+# CURSORES
+      Son Útiles para las consultas que devuelven más de una fila.
+
+      La sintaxis para declarar un cursor es:
+      CURSOR (Nombre del cursor) IS (Consulta select);
+
+      Para utilizar un cursor debemos abrirlo con: OPEN (Nombre del cursor);
+      
+      Para recuperar los datos utilizamos FETCH(Recuperar).
+      La sintax para el fetch es FETCH (Nombre cursor) INTO (nombre variable),(variable 2 etc hasta el mismo n de variables del cursor)
+      Es necesario comprobar que el cursor tenga filas, el valor traido sera la fila actual, cada fetch avanza en uno la fila a consultar.  
+
+      Luego lo cerramos con: CLOSE (Nombre del cursor);
